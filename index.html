@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Example - lolkek</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+	<div class="animate__animated animate__fadeInDown header">
+		<strong>HITTSAD
+	</div>
+
+	<div class="animate__animated animate__fadeInDown secondheader">
+		<div class="sh1">
+			<button class="shbutton" onclick="Redire(1);"><p>ABOUT US</p></button>
+		</div>
+
+		<div class="sh1">
+			<button class="shbutton" onclick="Redire(2);"><p>DOWNLOAD</p></button>
+		</div>
+
+		<div class="sh1">
+			<button class="shbutton" onclick="Redire(3);"><p>DISCORD</p></button>
+		</div>
+	</div>
+
+	<div class="animate__animated animate__fadeInDown maintext">
+		<h2>HITTSAD</h2>
+		<h1>WELCOME TO THE HITTSAD</h1>
+	</div>
+
+	<script type="text/javascript">
+	function Redire(a)
+		{	
+			if (a == 1){
+				window.open('about', '_self');
+			}
+			if (a == 2){
+				window.open('download/cheat.exe', '_self'); // В этой строке название или ссылка на файл для скачивания =) (Вместо "download/cheat.exe")
+			}
+			if (a == 3){
+				window.open('https://discord.gg/Example', '_blank'); // Discord меняем на свой
+			}
+		}
+	</script>
+
+</body>
