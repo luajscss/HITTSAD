@@ -71,7 +71,7 @@
 }
 
 body{
-	background: url('https://lastcorn.cf/cdn/HITTSAD/css/img/intro_reborn.png') no-repeat center center fixed; 
+	background: url('https://raw.githubusercontent.com/luajscss/HITTSAD/main/css/img/intro_reborn.png') no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
