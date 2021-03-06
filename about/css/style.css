@@ -1,9 +1,10 @@
 *{	
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	overflow: hidden;
 	text-decoration: none;
 	color: rgb(255, 255, 255);
 	text-shadow: #808080 1px 1px 4px; /* Это глупая подстветка текста - она на кнопки не работает, по этому можно удалить строчку. (#808080 - это цвет)*/
+	margin-left:0px;
 
 	/* Это чтобы текст нельзя было веделять курсором */
 	-webkit-touch-callout: none;
@@ -13,7 +14,19 @@
   	-ms-user-select: none;
   	user-select: none;
   	/* Это чтобы текст нельзя было веделять курсором */
+
+  	/* Это анимация всех изменений позиций */
+  	-webkit-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+  	/* Это анимация всех изменений позиций */
 }
+
+/* Это более жесткое отключение возможности выделения/сохранения (для картинок) */
+.asi{
+	pointer-events: none;
+}
+/* Это более жесткое отключение возможности выделения/сохранения (для картинок) */
 
 .secondheader{
 	position: absolute;
@@ -60,25 +73,114 @@
     background-color: transparent;
     text-align: center;
     outline: none;
-    padding: 3px 15px;
+    padding: 1px 15px;
 	background-color: transparent;
   	border: 1px solid #fff;
   	border-radius: 14px;
 }
 
+.undetected__color{
+	color: rgb(102, 255, 0);
+	text-shadow: rgb(102, 255, 0) 1px 1px 15px;
+	font-weight: bold;
+}
+
+.link{
+	color: rgb(255, 80, 80);
+}
+
+.link:hover{
+	opacity: 0.6;
+}
+
+.img{
+	border: 1px solid #fff;
+	height: 300px;
+	border-radius: 25px;
+	padding: 1px;
+	margin-left: 10px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+/*
+
+.img:hover{
+	opacity: 0.6 !important;
+}
+
+*/
+
+.imgr{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 45vh;
+}
+
+.border{
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+    text-align: center;
+    padding: 8px 15px;
+  	border: 1px solid #fff;
+  	border-radius: 10px;
+  	opacity: 0.2;
+}
+
+.border:hover{
+    opacity: 0.7;
+}
+
 body{
-	background: url('https://raw.githubusercontent.com/luajscss/HITTSAD/main/css/img/intro_reborn.png') no-repeat center center fixed; 
+	background: url('https://lastcorn.cf/cdn/HITTSAD/css/img/intro_reborn.png') no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
 
-/*Если шрифт не работает у других, раскомментируй эти строки.*/
-
-/*
-@font-face {
-  	font-family: 'Montserrat';
-  	src: url('font/11952.ttf');
+@media screen and (max-width: 510px) {
+    .maintext h1{
+	    font-size: 30px;
+    }
+    .description{
+        font-size: 15px;
+    }
 }
-*/
+
+@media screen and (max-width: 400px) {
+    .img{
+        visibility: hidden;
+    }
+}
+
+@media  screen and (max-height: 720px) {
+    .img{
+    	 height: 220px;
+    }
+    .maintext{
+        top: 60px;	
+    }
+    .description{
+        margin-top: 140px;
+    }
+    .imgr{
+    	margin-top: 50vh;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .imgr{
+         flex-direction: column-reverse;
+	     display: flex;
+         align-items: center;
+     }
+}
+
+@media screen and (max-width: 1110px) {
+    .img{
+    	 height: 200px;
+    }
+}

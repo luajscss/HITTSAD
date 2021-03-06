@@ -1,5 +1,5 @@
 *{	
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	overflow: hidden;
 	text-decoration: none;
 	color: rgb(255, 255, 255);
@@ -13,7 +13,19 @@
   	-ms-user-select: none;
   	user-select: none;
   	/* Это чтобы текст нельзя было веделять курсором */
+  	
+  	/* Это анимация всех изменений позиций */
+  	-webkit-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+  	/* Это анимация всех изменений позиций */
 }
+
+/* Это более жесткое отключение возможности выделения/сохранения (для картинок) */
+.asi{
+	pointer-events: none;
+}
+/* Это более жесткое отключение возможности выделения/сохранения (для картинок) */
 
 .header{
 	font-size: 45px;
@@ -71,18 +83,33 @@
 }
 
 body{
-	background: url('https://raw.githubusercontent.com/luajscss/HITTSAD/main/css/img/intro_reborn.png') no-repeat center center fixed; 
+	background: url('https://lastcorn.cf/cdn/HITTSAD/css/img/intro_reborn.png') no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
 
-/*Если шрифт не работает у других, раскомментируй эти строки.*/
+/*это что бы текст был зелёным!*/
 
-/*
-@font-face {
-  	font-family: 'Montserrat';
-  	src: url('font/11952.ttf');
+.Undetected__color {
+	color: #66ff00;
 }
-*/
+
+/*это что бы текст был зелёным!*/
+
+@media screen and (max-width: 450px) {
+    .maintext h1{
+	    font-size: 25px;
+    }
+    .header{
+	    font-size: 15px;
+	    left: 15px;
+    }
+    .secondheader{
+	    position: absolute;
+	    right: 5px;
+	    top: 55px;
+	    text-align: center;
+    }
+}
