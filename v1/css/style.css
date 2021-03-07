@@ -1,0 +1,115 @@
+*{
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	text-shadow: #808080 1px 1px 8px; /* Это глупая подстветка текста - она на кнопки не работает, по этому можно удалить строчку. (#808080 - это цвет)*/
+
+	/* Это чтобы текст нельзя было веделять курсором */
+	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+  	/* Это чтобы текст нельзя было веделять курсором */
+
+  	/* Это анимация всех изменений позиций */
+  	-webkit-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+  	/* Это анимация всех изменений позиций */
+}
+
+/* Это более жесткое отключение возможности выделения/сохранения (для картинок) */
+.asi{
+	pointer-events: none;
+}
+/* Это более жесткое отключение возможности выделения/сохранения (для картинок) */
+
+.header{
+	opacity: 0.3;
+	font-size: 45px;
+	text-align: center;
+	left: 35px;
+	top: 10px;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	letter-spacing: 8px;
+}
+
+.secondheader{
+	position: absolute;
+	right: 50px;
+	top: 30px;
+	text-align: center;
+}
+
+.sh1{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.sh1:hover{
+	opacity: 0.6;
+}
+
+.shbutton{
+    transition: .5s;
+    background-color: transparent;
+    text-align: center;
+    outline: none;
+    padding: 1px 15px;
+	background-color: transparent;
+  	border: 1px solid #fff;
+  	border-radius: 14px;
+}
+
+.maintext{
+	text-align: center;
+	justify-content: center;
+	position: flex;
+	top: 0%;
+	color: rgb(255, 255, 255);
+	letter-spacing: 10px;
+}
+
+.maintext h2{
+	font-size: 55px;
+}
+
+.maintext h1{
+	font-size: 75px;
+}
+
+body{
+	background: url('img/intro_reborn.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*это что бы текст был зелёным!*/
+
+.Undetected__color {
+	color: #66ff00;
+}
+
+/*это что бы текст был зелёным!*/
+
+@media screen and (max-width: 450px) {
+    .maintext h1{
+	    font-size: 25px;
+    }
+    .header{
+	    font-size: 15px;
+	    left: 15px;
+    }
+    .secondheader{
+	    position: absolute;
+	    right: 5px;
+	    top: 55px;
+	    text-align: center;
+    }
+}
