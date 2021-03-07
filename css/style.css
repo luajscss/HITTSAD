@@ -13,6 +13,12 @@
   	-ms-user-select: none;
   	user-select: none;
   	/* Это чтобы текст нельзя было веделять курсором */
+
+  	/* Это анимация всех изменений позиций */
+  	-webkit-transition: all .2s;
+  	-o-transition: all .2s;
+  	transition: all .2s;
+  	/* Это анимация всех изменений позиций */
 }
 
 .header{
