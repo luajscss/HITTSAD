@@ -46,7 +46,7 @@ mysqli_close($conn);
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<script src="https://hittsad.ml/cdn/db_connect.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://hittsad.ml/cdn/db_connect.css">
-	<style type="text/css"> <?php echo 'body{ background: url("' . $background . '"); }'; ?> </style>
+	<style type="text/css"> <?php  if($background_vers == '1'){ echo 'body{ background: url("' . $background . '"); background-repeat: repeat; }'; } if($background_vers == '2'){ echo 'body{ background: url("' . $background . '")  no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}'; } ?> </style>
 </head>
 
 <body>

@@ -22,9 +22,9 @@ $background_vers  = '1';    // Версия для выбора растяжен
 // Данные для подключения к sql базе
 
 $servername = "localhost";
-$database = "luajscss_logger";
-$username = "luajscss_logger";
-$password = "3UkJmT&r";
+$database = "admin";
+$username = "admin";
+$password = "password";
 
 // Данные для подключения к sql базе
 
