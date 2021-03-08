@@ -1,0 +1,25 @@
+.connect{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	color: rgb(25,255,25);
+	text-shadow: rgb(25,255,25) 1px 1px 1px;
+	opacity: 1;
+	-webkit-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+}
+
+.unconnect{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	color: rgb(255,25,25);
+	text-shadow: rgb(255,25,25) 1px 1px 1px;
+	opacity: 1;
+	-webkit-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+}

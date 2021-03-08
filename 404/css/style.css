@@ -3,7 +3,6 @@
 	overflow: hidden;
 	text-decoration: none;
 	color: rgb(255, 255, 255);
-	text-shadow: #808080 1px 1px 8px; /* Это глупая подстветка текста - она на кнопки не работает, по этому можно удалить строчку. (#808080 - это цвет)*/
 
 	/* Это чтобы текст нельзя было веделять курсором */
 	-webkit-touch-callout: none;
@@ -15,9 +14,9 @@
   	/* Это чтобы текст нельзя было веделять курсором */
 
   	/* Это анимация всех изменений позиций */
-  	-webkit-transition: all .2s;
-  	-o-transition: all .2s;
-  	transition: all .2s;
+  	-webkit-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
   	/* Это анимация всех изменений позиций */
 }
 
@@ -82,20 +81,14 @@
 }
 
 .maintext h1{
+	text-shadow: #808080 1px 1px 8px;
 	font-size: 25px;
 	margin-bottom: 50px;
 }
 
-body{
-	background: url('https://hittsad.ml/v2/css/img/intro_reborn.png') no-repeat center center fixed; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-}
-
 .oops {
 	color: rgb(255, 44, 44);
+	text-shadow: rgb(255, 44, 44) 1px 1px 4px;
 }
 
 @media screen and (max-width: 450px) {
