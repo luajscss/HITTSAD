@@ -4,6 +4,7 @@
   text-decoration: none;
   color: rgb(255, 255, 255);
   text-shadow: #808080 1px 1px 4px; /* Это глупая подстветка текста - она на кнопки не работает, по этому можно удалить строчку. (#808080 - это цвет)*/
+  outline: none;
 
   /* Это чтобы текст нельзя было веделять курсором */
   -webkit-touch-callout: none;
@@ -37,7 +38,6 @@
 
 .shbutton{
   transition: .5s;
-  background-color: transparent;
   text-align: center;
   outline: none;
   padding: 1px 15px;
@@ -115,7 +115,7 @@
   flex-direction: row;
   justify-content: center;
   margin-top: 45vh;
-  height: 305px;
+  height: 380px;;
 }
 
 .img{
@@ -179,6 +179,38 @@
 }
 
 /* Анимация информации на картинку */
+
+.voice_1, .voice_2, .voice_3{
+  display: flex;
+  position: absolute;
+  left: 98.5px;
+  text-align: center;
+  padding: 1px 18px;
+  border: 1px solid #fff;
+  background-color: rgba(0,0,0,.5);
+  border-radius: 100px;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.voice_1:hover, .voice_2:hover, .voice_3:hover{
+  opacity: 0.5;
+}
+
+.button_effect{
+  position: absolute;
+  height: 50px !important;
+  left: 125px;
+  top: 30px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  opacity: 0;
+}
 
 
 /* Задний фон */
@@ -286,6 +318,11 @@ body{
     padding: 1px 8px;
     border-radius: 10px;
   }
+  .button_effect{
+    height: 45px;
+    left: 85px;
+    top: 20px;
+  }
 }
 
 @media screen and (min-height: 801px) {
@@ -321,6 +358,9 @@ body{
   .description{
     font-size: 15px;
   }
+  .button_effect{
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 675px) {
@@ -343,6 +383,10 @@ body{
   }
   .account_1, .account_2, .account_3, .descript_1, .descript_2, .descript_3{
     border-radius: 100px;
+  }
+  .voice_1, .voice_2, .voice_3{
+    visibility: hidden;
+    display: block;
   }
 }
 
@@ -378,6 +422,11 @@ body{
   .imgr{
     margin-top: 45vh;
   }
+  .button_effect{
+    height: 25px;
+    left: 50px;
+    top: 10px;
+  }
 }
 
 @media screen and (min-width: 675px) and (max-width: 980px) {
@@ -392,6 +441,16 @@ body{
     font-size: 13px;
     padding: 1px 8px;
     border-radius: 10px;
+  }
+  .voice_1, .voice_2, .voice_3{
+    display: flex;
+    position: absolute;
+    left: 50px;
+  }
+  .button_effect{
+    height: 45px;
+    left: 80px;
+    top: 20px;
   }
 }
 
