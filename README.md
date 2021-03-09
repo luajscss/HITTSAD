@@ -10,4 +10,4 @@ cdn/config.php - основные настройки будут здесь.
 - v2/index.php | v2/about/index.php
 
 
-Если нужна помощь пиши в # DISCORD: Senpai#3111
+Если нужна помощь пиши в DISCORD: Senpai#3111
