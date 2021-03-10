@@ -1,7 +1,14 @@
+<?php
+include ('../cdn/config.php');
+if($enable == !false){
+	header("Location: https://hittsad.ml/");
+	die();
+}
+?>
 <!DOCTYPE html>
 
 <head>
-	<title>HITTSAD - version selecter</title>
+	<title>HITTSAD</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="author" content="luas">

@@ -1,21 +1,31 @@
-<?php     
-$servername = "localhost";
-$database = "luajscss_logger";
-$username = "luajscss_logger";
-$password = "3UkJmT&r";
-
-$ip = $_SERVER['REMOTE_ADDR'];
-$lasturl = $_SERVER['HTTP_REFERER'];
-$useragent = $_SERVER['HTTP_USER_AGENT'];
-$data = date('Y-m-d H:i:s');
-
+<?php
+include ('../cdn/config.php');
+if($enable == true){
+	header("Location: https://hittsad.ml/disable");
+	die();
+}
 $conn = mysqli_connect($servername, $username, $password, $database);
- 
+
 $sql = 'INSERT INTO selecter (ip, lasturl, useragent, data) VALUES ("' . $ip . '", "' . $lasturl . '", "' . $useragent . '", "' . $data . '")';
 
-mysqli_query($conn, $sql);
+	if($mysql == true){
+		if(mysqli_query($conn, $sql)){
+			if($connection_text == true){
+				echo '<a class="connect" id="opacit">Connection successfully</a>';
+			}
+		}else{
+			if($connection_text == true){
+				echo '<a class="unconnect" id="opacit">Connection Failed</a>';
+			}
+		}
+	}else{
+		if($debug == true){
+			echo '<a class="unconnect" id="opacit">Mysql Disabled</a>';
+		}
+	}
 
 mysqli_close($conn);
+
 ?>
 
 

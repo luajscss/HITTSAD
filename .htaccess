@@ -1,1 +1,2 @@
 ErrorDocument 404 https://hittsad.ml/404/
+ErrorDocument 403 https://hittsad.ml/

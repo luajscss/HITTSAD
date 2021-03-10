@@ -8,24 +8,23 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 
 $sql = 'INSERT INTO v2_about (ip, lasturl, useragent, data) VALUES ("' . $ip . '", "' . $lasturl . '", "' . $useragent . '", "' . $data . '")';
 
-	if($mysql == true){
-		if(mysqli_query($conn, $sql)){
-			if($connection_text == true){
-				echo '<a class="connect" id="opacit">Connection successfully</a>';
-			}
-		}else{
-			if($connection_text == true){
-				echo '<a class="unconnect" id="opacit">Connection Failed</a>';
-			}
+if($mysql == true){
+	if(mysqli_query($conn, $sql)){
+		if($connection_text == true){
+			echo '<a class="connect" id="opacit">Connection successfully</a>';
 		}
 	}else{
-		if($debug == true){
-			echo '<a class="unconnect" id="opacit">Mysql Disabled</a>';
+		if($connection_text == true){
+			echo '<a class="unconnect" id="opacit">Connection Failed</a>';
 		}
 	}
+}else{
+	if($debug == true){
+		echo '<a class="unconnect" id="opacit">Mysql Disabled</a>';
+	}
+}
 
 mysqli_close($conn);
-
 ?>
 
 <!DOCTYPE html>
@@ -44,10 +43,11 @@ mysqli_close($conn);
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="https://hittsad.ml/cdn/db_connect.css">
 	<script src="https://hittsad.ml/cdn/db_connect.js"></script>
-	<style type="text/css"> <?php  if($background_vers == '1'){ echo 'body{ background: url("' . $background . '"); background-repeat: repeat; }'; } if($background_vers == '2'){ echo 'body{ background: url("' . $background . '")  no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}'; } ?> </style>
+	<style type="text/css"> <?php if($background_vers == '1'){ echo 'body{ background: url("' . $background . '"); background-repeat: repeat; }'; } if($background_vers == '2'){ echo 'body{ background: url("' . $background . '")  no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}'; } ?> </style>
 </head>
 
 <body>
+	<a class="copy" id="opacitalert">Discord copying to clipboard!</a>
 	<div class="animate__animated animate__fadeInDown secondheader">
 		<div class="sh1">
 			<button class="shbutton" onclick="Back();"><p>Back</p></button>
@@ -66,14 +66,14 @@ mysqli_close($conn);
 	</div>
 
 	<div class="imgr">
-		<div class="account_1">
-			<audio id="audio_1"> <source src="https://hittsad.ml/cdn/v2/1.mp3" type="audio/mpeg"> </audio>
+		<div class="account_1" onclick="Copy(1)">
+			<audio id="audio_1"> <source src=<?php echo '"'.$account_sound_1.'"';?> type="audio/mpeg"> </audio>
 			<div class="li_1" onclick="Voice(1);">
-				<img class="animate__animated animate__fadeIn asi img" src="https://hittsad.ml/cdn/v2/img/Itachi.png">
+				<img class="animate__animated animate__fadeIn asi img" src=<?php echo '"'.$account_background_1.'"';?>>
 				<span class="descript_1">
-					<a class="name__color">ITACHI</a> <br>
-					<a class="discord"><b>Discord: </b>ɪᴛᴀᴄʜɪ#5218</a> <br>
-					<a class="developer_color rank__position">Разработчик ПО</a>
+					<a class="name__color"><?php echo $account_name_1; ?></a> <br>
+					<a class="discord"><b>Discord: </b><a><?php echo $account_discord_1; ?></a></a> <br>
+					<a class="developer_color rank__position"><?php echo $account_job_1; ?></a>
 				</span>
 				<img class="button_effect asi" id="opacit1" src="https://hittsad.ml/cdn/v2/sound.gif">
 			</div>
@@ -81,14 +81,14 @@ mysqli_close($conn);
 			<button class="voice_1" onclick="Voice(1);"><p>Прослушать</p></button>
 -->
 	 	</div>
-	 	<div class="account_2">
-	 		<audio id="audio_2"> <source src="https://hittsad.ml/cdn/v2/2.wav" type="audio/mpeg"> </audio>
+	 	<div class="account_2" onclick="Copy(2)">
+	 		<audio id="audio_2"> <source src=<?php echo '"'.$account_sound_2.'"';?> type="audio/mpeg"> </audio>
 			<div class="li_2" onclick="Voice(2);">
-				<img class="animate__animated animate__fadeIn asi img" src="https://hittsad.ml/cdn/v2/img/Errda.png">
+				<img class="animate__animated animate__fadeIn asi img" src=<?php echo '"'.$account_background_2.'"';?>>
 				<span class="descript_2">
-					<a class="name__color">Errda</a> <br>
-					<a class="discord"><b>Discord: </b>!Errda#4982 <br>
-					<a class="developer_color rank__position">Дизайнер</a>
+					<a class="name__color"><?php echo $account_name_2; ?></a> <br>
+					<a class="discord"><b>Discord: </b><a><?php echo $account_discord_2; ?></a></a> <br>
+					<a class="developer_color rank__position"><?php echo $account_job_2; ?></a>
 				</span>
 				<img class="button_effect asi" id="opacit2" src="https://hittsad.ml/cdn/v2/sound.gif">
 			</div>
@@ -96,14 +96,14 @@ mysqli_close($conn);
 			<button class="voice_2" onclick="Voice(2);"><p>Прослушать</p></button>
 -->
 	 	</div>
-	 	<div class="account_3">
-	 		<audio id="audio_3"> <source src="https://hittsad.ml/cdn/v2/3.mp3" type="audio/mpeg"> </audio>
+	 	<div class="account_3" onclick="Copy(3)">
+	 		<audio id="audio_3"> <source src=<?php echo '"'.$account_sound_3.'"';?> type="audio/mpeg"> </audio>
 			<div class="li_3" onclick="Voice(3);">
-				<img class="animate__animated animate__fadeIn asi img" src="https://hittsad.ml/cdn/v2/img/Senpai.png">
+				<img class="animate__animated animate__fadeIn asi img" src=<?php echo '"'.$account_background_3.'"';?>>
 				<span class="descript_3">
-					<a class="name__color">Senpai</a> <br>
-					<a class="discord"><b>Discord: </b>Senpai#3111</a> <br>
-					<a class="developer_color rank__position">Front-End Разработчик</a>
+					<a class="name__color"><?php echo $account_name_3; ?></a> <br>
+					<a class="discord"><b>Discord: </b><a><?php echo $account_discord_3; ?></a></a> <br>
+					<a class="developer_color rank__position"><?php echo $account_job_3; ?></a>
 				</span>
 				<img class="button_effect asi" id="opacit3" src="https://hittsad.ml/cdn/v2/sound.gif">
 			</div>
@@ -120,6 +120,21 @@ mysqli_close($conn);
 	<div class="border">
  		<input type="range" min="1" max="20" id="volumes" oninput="volumesetting()" value="3">
  	</div>
+
+ 	<script type="text/javascript">
+ 		function Copy(id){
+ 			if (id == 1){
+ 				<?php echo'navigator.clipboard.writeText("' . $account_discord_1 . '");' ?>
+ 			}
+ 			if (id == 2){
+ 				<?php echo'navigator.clipboard.writeText("' . $account_discord_2 . '");' ?>
+ 			}
+ 			if (id == 3){
+ 				<?php echo'navigator.clipboard.writeText("' . $account_discord_3 . '");' ?>
+ 			}
+ 			alert();
+ 		}
+ 	</script>
 
  	<script type="text/javascript">
  	var audio = document.getElementById("audiopl");

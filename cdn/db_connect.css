@@ -23,3 +23,16 @@
   	-o-transition: all .5s;
   	transition: all .5s;
 }
+
+.copy{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	color: rgb(65,65,65);
+	text-shadow:0 0 10px;
+	opacity: 0;
+	-webkit-transition: all .6s;
+  	-o-transition: all .6s;
+  	transition: all .6s;
+}
